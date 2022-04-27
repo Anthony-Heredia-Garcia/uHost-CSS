@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+div {
+    border: 2px solid black;
+    padding: 5px 10px 8px 12px;
+    margin: 12px 5px 9px 0px;
+    display: inline-block;
+}
+
+.first-box {
+    height: 300px;
+    width: 50%;
+    /* display:  none; */
+    box-sizing: border-box;
+}
+
+.second-box {
+    width: 40%;
+}
+
+div:last-of-type:hover {
+    color: white;
+    background-color: black;   
+}
