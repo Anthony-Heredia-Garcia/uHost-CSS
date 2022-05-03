@@ -4,8 +4,7 @@
     background-position: left 10% bottom 20%;
     box-sizing: border-box; */
   background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-      url(freedom.jpg) left 10% bottom 70% / cover no-repeat border-box,
-    #ff1b68;
+    url(freedom.jpg) center / cover no-repeat border-box, #ff1b68;
   /* background-image: linear-gradient(to left bottom, red, blue); */
   width: 100%;
   height: 33vh;
@@ -19,11 +18,11 @@
   position: absolute;
   bottom: 5%;
   left: 4%;
+  font-size: 1.6rem;
 }
 
-.plan-list {
-  width: 80%;
-  margin: auto;
+.section-title {
+  color: #2ddf5c;
   text-align: center;
 }
 
@@ -31,21 +30,18 @@
   background-color: #d5ffdc;
   text-align: center;
   padding: 1rem;
-  margin: .5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  margin: 0.5rem 0;
+  width: 100%;
 }
 
 .plan--highlighted {
   background-color: #19b84c;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
 .plan__annotation {
   background-color: white;
-  padding: .5rem;
+  padding: 0.5rem;
   color: rgb(1, 97, 41);
   box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
@@ -77,14 +73,28 @@ ul li {
   margin: 8px 0;
 }
 
-.section-title {
-  color: #2ddf5c;
-  text-align: center;
+@media (min-width: 40rem) {
+  .plan-list {
+    width: 100%;
+    text-align: center;
+  }
+
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.5);
+  }
+
+  .plan {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    min-width: 13rem;
+    max-width: 25rem;
+  }
 }
 
 .key-features {
   background-color: #ff1b68;
-  margin-top: 5rem; 
+  margin-top: 5rem;
   padding: 1rem;
 }
 
@@ -102,10 +112,16 @@ ul li {
 }
 
 .reasons {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+  display: block;
+  width: 100%;
   color: white;
+}
+
+@media (min-width: 40rem) {
+  .reasons {
+    display: inline-block;
+    width: 30%;
+  }
 }
 
 .reasons p {
@@ -172,4 +188,15 @@ ul li {
 .modal__action--negative:active {
   background: #ff5454;
   border-color: #ff5454;
+}
+
+@media (min-width: 40rem) {
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
+
+  #product-overview h1 {
+    font-size: 3rem;
+  }
 }
