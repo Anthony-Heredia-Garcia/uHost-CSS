@@ -8,7 +8,6 @@
   /* background-image: linear-gradient(to left bottom, red, blue); */
   width: 100%;
   height: 33vh;
-  margin-top: 2.75rem;
   position: relative;
 }
 
@@ -120,6 +119,7 @@ ul li {
 @media (min-width: 40rem) {
   .reasons {
     display: inline-block;
+    max-width: 25rem;
     width: 30%;
   }
 }
@@ -190,7 +190,7 @@ ul li {
   border-color: #ff5454;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 40rem) and (min-height: 40rem) {
   #product-overview {
     height: 40vh;
     background-position: 50% 25%;
