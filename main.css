@@ -75,20 +75,28 @@ ul li {
 @media (min-width: 40rem) {
   .plan-list {
     width: 100%;
-    text-align: center;
-  }
-
-  .plan--highlighted {
-    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.5);
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .plan {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 28rem;
     width: 30%;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     min-width: 13rem;
     max-width: 25rem;
   }
+}
+
+.plan--highlighted {
+  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.5);
+  height: 30rem;
+  z-index: 50;
 }
 
 .key-features {
@@ -107,7 +115,6 @@ ul li {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 .reasons {
@@ -117,8 +124,12 @@ ul li {
 }
 
 @media (min-width: 40rem) {
+  .reasons-list {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
   .reasons {
-    display: inline-block;
     max-width: 25rem;
     width: 30%;
   }
