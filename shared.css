@@ -14,17 +14,25 @@ html {
 }
 
 body {
-  height: 100%;
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  display: grid;
-  grid-template-rows: auto 9rem;
   padding-top: 3.5rem;
 }
 
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-rows: 3.5rem auto fit-content(8rem);
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+    padding-top: 0;
+    height: 100%
+  }
+}
+
 main {
-    /* min-height: calc(100vh - 3.5rem - 8rem); */
-    margin-top: 3.5rem;
+    grid-area: main;
 }
 
 .backdrop {
@@ -47,6 +55,9 @@ main {
   background-color: #2ddf5c;
   padding: 0.5rem 1rem;
   z-index: 60;
+  display: -webkit-box; /*These 3 are the vendor prefixes for early flexbox*/
+  display: -ms-flexbox; /*If browsers don't fully support a feature, they might support one of these*/
+  display: -webkit-flex; /*but if they do support display: flex, then that will override the others*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -173,6 +184,7 @@ main {
   background-color: black;
   padding: 2rem;
   margin-top: 3rem;
+  grid-area: footer;
 }
 
 .footer ul {
