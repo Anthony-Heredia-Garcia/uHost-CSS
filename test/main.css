@@ -1,6 +1,17 @@
-@import url(c:\Users\antho\Desktop\Code\CSS-uHost-Website\test\typography.css);
+.char-highlight {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #521751;
+}
+
 html {
   font-size: 94.75%;
+}
+
+@media (min-width: 40rem) {
+  html {
+    font-size: 125%;
+  }
 }
 
 body {
@@ -87,8 +98,7 @@ body {
   border: 0.05rem solid #521751;
 }
 
-.documentation-links .documentation-link:hover,
-.documentation-links .documentation-link:active {
+.documentation-links .documentation-link:hover, .documentation-links .documentation-link:active {
   color: white;
   background: #fa923f;
   border-color: #fa923f;
